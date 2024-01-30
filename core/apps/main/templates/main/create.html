@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Создать альбом
+{% endblock %}
+
+{% block content %}
+    <h1>создать </h1>
+    <form method="post" >
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.release_date }}<br>
+        {{ form.release_type }}<br>
+        {{ form.picture_link }}<br>
+      <button class="submit" class="btn btn-success">Добавить</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}
